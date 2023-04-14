@@ -183,11 +183,15 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.3-service.clearkey
 
-# FM
-PRODUCT_PACKAGES += \
-    FM2 \
-    libqcomfm_jni \
-    qcom.fmradio
+# FMRadio deps
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/FMRadio/privapp_whitelist_com.caf.fmradio.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp_whitelist_com.caf.fmradio.xml \
+    $(LOCAL_PATH)/FMRadio/qcom.fmradio.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/qcom.fmradio.xml \
+    $(LOCAL_PATH)/FMRadio/libqcomfm_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libqcomfm_jni.so \
+    $(LOCAL_PATH)/FMRadio/qcom.fmradio.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/qcom.fmradio.jar
+
+# FMRadio app
+PRODUCT_PACKAGES += FM2Prebuilt
     
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
