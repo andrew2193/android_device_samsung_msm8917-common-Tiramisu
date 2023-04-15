@@ -149,7 +149,7 @@ PRODUCT_PACKAGES += \
 
 # Display - CAF
 PRODUCT_PACKAGES += \
-    Msm8917Doze \
+    Msm8917Parts \
     copybit.msm8937 \
     hwcomposer.msm8937 \
     memtrack.msm8937 \
