@@ -68,6 +68,7 @@ BOARD_HAVE_QCOM_FM := true
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 ifneq ($(TARGET_DEVICE), j2y18lte)
+endif
 
 # Audio
 AUDIO_FEATURE_ENABLED_AAC_ADTS_OFFLOAD := true
